@@ -50,7 +50,11 @@ console.log(multiplyNum(3, 5))
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function toDogYears (years){
+    return years * 7;
+}
 
+console.log("I am a " + toDogYears(28) + " year old dog.")
 
 
 
