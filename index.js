@@ -237,14 +237,28 @@ function getGrade() {
 
 console.log(getGrade());
 
+
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+function vowelCounter (str) {
 
+    let count = 0;
 
+    let strCopy = str.toLowerCase();
 
+    for (i=0; i < strCopy.length; i++){
+        if (strCopy[i]==='a' || strCopy[i]==='e' || strCopy[i]==='i' || strCopy[i]==='o' || strCopy[i]==='u'){
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log(vowelCounter('rainbow'));
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
