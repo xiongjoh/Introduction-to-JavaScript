@@ -126,6 +126,7 @@ function rpcGame(hand) {
 
     let playerHand = null;
 
+    //set player's string to numbers
     if (hand === 'rock') {
         playerHand = 0;
     }
@@ -139,6 +140,7 @@ function rpcGame(hand) {
         return "please type: 'rock' 'paper' or 'scissors'"
     }
 
+    // compare the player's hand to the computer's rgn to see if we win or not
     if (playerHand === computerHand) {
         console.log("computer hand was " + computerHand)
         return 'Tie'
@@ -167,15 +169,19 @@ console.log(rpcGame('scissors'));
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kiloToMiles (km) {
+    return km * .621371;
+}
 
-
-
+console.log(kiloToMiles(5))
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 
+function feetToCenti (ft) {
+    return ft * 30.48;
+}
 
-
-
+console.log(feetToCenti(5))
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
