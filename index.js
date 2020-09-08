@@ -76,7 +76,39 @@ console.log("I am a " + toDogYears(28) + " year old dog.")
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
+function dogFeeder (weight, age){
+    if (weight < 0 || age < 0 ){
+        return "invalid entries"
+    }
+    else if (age >= 1){
+        if (weight <= 5){
+            return weight * .05;
+        }
+        else if (weight <= 10){
+            return weight * .04;
+        }
+        else if (weight <= 15){
+            return weight * .03;
+        }
+        else{
+            return weight * .02;
+        }
+    }
+    else {
+        if (age <= .33){
+            return weight * .1;
+        }
+        else if (age <= .58){
+            return weight * .05;
+        }
+        else {
+            return weight * .04;
+        }
 
+    }
+}
+
+console.log(dogFeeder(15, 1))
 
 
 
