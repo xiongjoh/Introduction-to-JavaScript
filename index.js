@@ -123,7 +123,7 @@ function rpcGame(hand) {
 
     let computerHand = Math.floor(Math.random() * 3);
     // 0 = rock, 1 = paper, 2 = scissors
-
+    let handForms = ['rock', 'paper', 'scissors'];
     let playerHand = null;
 
     //set player's string to numbers
@@ -142,24 +142,24 @@ function rpcGame(hand) {
 
     // compare the player's hand to the computer's rgn to see if we win or not
     if (playerHand === computerHand) {
-        console.log("computer hand was " + computerHand)
+        console.log("computer hand was " + handForms[computerHand])
         return 'Tie'
     }
     else if (playerHand === computerHand + 1) {
-        console.log("computer hand was " + computerHand)
+        console.log("computer hand was " + handForms[computerHand])
         return 'Win!'
     }
     else if (playerHand === 0 && computerHand === 2) {
-        console.log("computer hand was " + computerHand)
+        console.log("computer hand was " + handForms[computerHand])
         return 'Win!'
     }
     else {
-        console.log("computer hand was " + computerHand)
+        console.log("computer hand was " + handForms[computerHand])
         return 'Lost!'
     }
 }
 
-}
+
 
 console.log(rpcGame('scissors'));
 
@@ -243,14 +243,14 @@ console.log(getGrade());
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
-function vowelCounter (str) {
+function vowelCounter(str) {
 
     let count = 0;
 
     let strCopy = str.toLowerCase();
 
-    for (i=0; i < strCopy.length; i++){
-        if (strCopy[i]==='a' || strCopy[i]==='e' || strCopy[i]==='i' || strCopy[i]==='o' || strCopy[i]==='u'){
+    for (i = 0; i < strCopy.length; i++) {
+        if (strCopy[i] === 'a' || strCopy[i] === 'e' || strCopy[i] === 'i' || strCopy[i] === 'o' || strCopy[i] === 'u') {
             count++;
         }
     }
@@ -265,6 +265,6 @@ console.log(vowelCounter('rainbow'));
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
 
+var handValue = prompt('Please enter: rock, paper, or scissors : ')
 
-
-
+console.log(rpcGame(handValue));
